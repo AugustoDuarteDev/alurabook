@@ -1,0 +1,142 @@
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+.titulo1024{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.container__texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .titulo1024{
+        display: block;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .titulo1024__forte{
+        font-weight: bold;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item{
+        padding: 1em;
+        text-transform: uppercase;
+    }
+
+    .categorias{
+        color: var(--laranja);
+        font-weight: 500;
+    }
+
+    .opcoes__link{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    .none{
+        display: none;
+    }
+
+    .opcao__botao{
+        display: none;
+    }
+
+    .opcao__botao:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    
+}
+
+@media screen and (min-width: 1728px) {
+
+    .container{
+        width: 30%;
+    }
+
+
+    .container__link{
+        color: var(--azul);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding-left: 2em;
+    }
+
+    .container__texto{
+        display: block;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+}
